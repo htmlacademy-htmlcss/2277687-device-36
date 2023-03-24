@@ -1,0 +1,170 @@
+@font-face {
+    font-family: "Raleway";
+    font-style: normal;
+    font-weight: 800;
+    src: url("../fonts/raleway/raleway-800.woff2") format("woff2");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Rubik";
+    font-style: normal;
+    font-weight: 400;
+    src: url("../fonts/rubik/rubik-400.woff2") format("woff2");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Rubik";
+    font-style: normal;
+    font-weight: 700;
+    src: url("../fonts/rubik/rubik-700.woff2") format("woff2");
+    font-display: swap;
+}
+
+body {
+    font-family: "Rubik", sans-serif;
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: 400;
+    color: #000000;
+}
+
+/* Buttons */
+
+.btn {
+    display: block;
+
+    font-family: "Raleway";
+    font-size: 18px;
+    font-weight: 800;
+    line-height: normal;
+    letter-spacing: .2rem;
+    color: #000000;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+/*visually-hidden !!! */
+
+.visually-hidden {
+    position: absolute;
+
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+
+    border: 0;
+
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+
+
+/*Header*/
+
+.menu-search-input {
+    font-family: "Rubik";
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.menu-search-btn {
+    font-family: "Rubik";
+    font-size: 16px;
+}
+
+.menu-link {
+    color: #000000;
+    text-decoration: none;
+}
+
+.submenu-link {
+    font-family: "Raleway";
+    font-size: 18px;
+    font-weight: 800;
+    line-height: normal;
+    letter-spacing: .2rem;
+    color: #000000;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+
+/* Slider */
+
+.slider-counter {
+    margin: 0;
+
+    font-size: 180px;
+    line-height: normal;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.slider-product-title {
+    font-family: "Raleway";
+    font-size: 50px;
+    font-weight: 800;
+    line-height: 50px;
+}
+
+.slider-product-description {
+    color: #444444;
+}
+
+.slider-product-feature-count {
+    margin: 0;
+
+    font-size: 36px;
+    font-weight: 400;
+
+}
+
+.slider-product-feature-description {
+    color: #444444;
+}
+
+/*Categories*/
+
+.category-link {
+    margin: 0;
+
+    font-family: "Raleway";
+    font-size: 18px;
+    font-weight: 800;
+    line-height: 24px;
+    letter-spacing: -0.02rem;
+    color: #000000;
+    text-decoration: none;
+}
+
+
+/*Services*/
+
+.service-title {
+    margin: 0;
+
+    font-family: "Raleway";
+    font-size: 50px;
+    font-weight: 800;
+    line-height: 50px;
+}
+
+.service-description {
+    color: #444444;
+}
+
+
+/*Delivery*/
+
+.delivery-description {
+    margin: 0;
+
+    font-family: "Raleway";
+    font-size: 50px;
+    font-weight: 800;
+    line-height: 50px;
+}
