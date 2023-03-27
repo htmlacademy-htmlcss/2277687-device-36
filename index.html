@@ -46,26 +46,24 @@
               </li>
             </ul>
           </div>
-          <div class="submenu">
-            <a class="submenu-link catalog-toggler" href="#">
+          <div class="header-submenu">
+            <button class="header-submenu-link catalog-toggler" type="button">
               Каталог товаров
-              <button class="catalog-toggle" type="button">
-                <span class="visually-hidden">Развернуть каталог</span>
-              </button>
-            </a>
-            <ul class="submenu-list">
-              <li class="submenu-item">
-                <a class="submenu-link" href="#">
+              <span class="visually-hidden">Развернуть каталог</span>
+            </button>
+            <ul class="header-submenu-list">
+              <li class="header-submenu-item">
+                <a class="header-submenu-link" href="#">
                   Доставка
                 </a>
               </li>
-              <li class="submenu-item">
-                <a class="submenu-link" href="#">
+              <li class="header-submenu-item">
+                <a class="header-submenu-link" href="#">
                   Гарантия
                 </a>
               </li>
-              <li class="submenu-item">
-                <a class="submenu-link" href="#">
+              <li class="header-submenu-item">
+                <a class="header-submenu-link" href="#">
                   Контакты
                 </a>
               </li>
@@ -81,14 +79,16 @@
           <ol class="slider-product-list">
             <li class="slider-product">
               <div class="slider-product-images">
-                <button class="slider-arrow slider-arrow-left" type="button">
-                  <span class="visually-hidden">Предыдущий слайд</span>
-                </button>
                 <img class="slider-product-img" width="560" height="560" alt="Квадрокоптер."
                   src="./images/slider-quadrocopter.png">
-                <button class="slider-arrow slider-arrow-left" type="button">
-                  <span class="visually-hidden">Следующий слайд</span>
-                </button>
+                <div class="slider-product-controls">
+                  <button class="slider-arrow slider-arrow-left" type="button">
+                    <span class="visually-hidden">Предыдущий слайд</span>
+                  </button>
+                  <button class="slider-arrow slider-arrow-right" type="button">
+                    <span class="visually-hidden">Следующий слайд</span>
+                  </button>
+                </div>
               </div>
               <div class="slider-content">
                 <p class="slider-counter">01</p>
@@ -114,14 +114,16 @@
             </li>
             <li class="slider-product">
               <div class="slider-product-images">
-                <button class="slider-arrow slider-arrow-left" type="button">
-                  <span class="visually-hidden">Предыдущий слайд</span>
-                </button>
                 <img class="slider-product-img" width="560" height="560" alt="Фитнес-браслет."
                   src="./images/slider-fitness-bracelet.png">
-                <button class="slider-arrow slider-arrow-left" type="button">
-                  <span class="visually-hidden">Следующий слайд</span>
-                </button>
+                <div class="slider-product-controls">
+                  <button class="slider-arrow slider-arrow-left" type="button">
+                    <span class="visually-hidden">Предыдущий слайд</span>
+                  </button>
+                  <button class="slider-arrow slider-arrow-right" type="button">
+                    <span class="visually-hidden">Следующий слайд</span>
+                  </button>
+                </div>
               </div>
               <div class="slider-content">
                 <p class="slider-counter">02</p>
@@ -141,14 +143,16 @@
             </li>
             <li class="slider-product">
               <div class="slider-product-images">
-                <button class="slider-arrow slider-arrow-left" type="button">
-                  <span class="visually-hidden">Предыдущий слайд</span>
-                </button>
                 <img class="slider-product-img" width="560" height="560" alt="Селфи-палка."
                   src="./images/slider-monopod.png">
-                <button class="slider-arrow slider-arrow-left" type="button">
-                  <span class="visually-hidden">Следующий слайд</span>
-                </button>
+                <div class="slider-product-controls">
+                  <button class="slider-arrow slider-arrow-left" type="button">
+                    <span class="visually-hidden">Предыдущий слайд</span>
+                  </button>
+                  <button class="slider-arrow slider-arrow-right" type="button">
+                    <span class="visually-hidden">Следующий слайд</span>
+                  </button>
+                </div>
               </div>
               <div class="slider-content">
                 <p class="slider-counter">03</p>
@@ -177,19 +181,19 @@
           </ol>
           <ol class="slider-pagination">
             <li class="slider-pagination-item">
-              <a class="slider-dot slider-dot-active" href="#">
+              <button class="slider-dot slider-dot-active" type="button">
                 <span class="visually-hidden">Первый товар</span>
-              </a>
+              </button>
             </li>
             <li class="slider-pagination-item">
-              <a class="slider-dot" href="#">
+              <button class="slider-dot" type="button">
                 <span class="visually-hidden">Второй товар</span>
-              </a>
+              </button>
             </li>
             <li class="slider-pagination-item">
-              <a class="slider-dot" href="#">
+              <button class="slider-dot" type="button">
                 <span class="visually-hidden">Третий товар</span>
-              </a>
+              </button>
             </li>
           </ol>
         </section>
@@ -201,37 +205,37 @@
             <li class="category-item">
               <a class="category-link" href="#">
                 <div class="category-icon category-icon-vr"></div>
-                <p class="category-description">Виртуальная реальность</p>
+                Виртуальная реальность
               </a>
             </li>
             <li class="category-item">
               <a class="category-link" href="#">
                 <div class="category-icon category-icon-selfi-stick"></div>
-                <p class="category-description">Моноподы для селфи</p>
+                Моноподы для селфи
               </a>
             </li>
             <li class="category-item">
               <a class="category-link" href="#">
                 <div class="category-icon category-icon-action-camera"></div>
-                <p class="category-description">Экшн-камеры</p>
+                Экшн-камеры
               </a>
             </li>
             <li class="category-item">
               <a class="category-link" href="#">
                 <div class="category-icon category-icon-fitness-bracelet"></div>
-                <p class="category-description">Фитнес-браслеты</p>
+                Фитнес-браслеты
               </a>
             </li>
             <li class="category-item">
               <a class="category-link" href="#">
                 <div class="category-icon category-icon-smart-clock"></div>
-                <p class="category-description">Умные часы</p>
+                Умные часы
               </a>
             </li>
             <li class="category-item">
               <a class="category-link" href="#">
                 <div class="category-icon category-icon-vr-quadrocopter"></div>
-                <p class="category-description">Квадракоптеры</p>
+                Квадракоптеры
               </a>
             </li>
           </ul>

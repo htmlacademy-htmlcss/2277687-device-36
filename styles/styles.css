@@ -96,7 +96,37 @@ body {
 /*Header*/
 
 .main-header {
+    margin-top: 20px;
+    padding: 0 60px;
+
     background: linear-gradient(180deg, rgba(255, 255, 255, 0) 20px, #ffe17f 20px, #ffe17f 100%);
+}
+
+.navigation-logo {
+    display: inline-block;
+    margin-bottom: 30px;
+}
+
+.user-menu {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.user-menu-search-list {
+    display: flex;
+    margin: 0;
+    padding: 0;
+
+    list-style-type: none;
+}
+
+.user-menu-cart-list {
+    display: flex;
+    margin: 0;
+    padding: 0;
+
+    list-style-type: none;
 }
 
 .menu-search-input {
@@ -115,11 +145,19 @@ body {
     text-decoration: none;
 }
 
-.submenu-list {
-    margin: 0;
+.header-submenu {
+    display: flex;
+    justify-content: space-between;
 }
 
-.submenu-link {
+.header-submenu-list {
+    display: flex;
+    margin: 0;
+
+    list-style-type: none;
+}
+
+.header-submenu-link {
     font-family: "Raleway";
     font-size: 18px;
     font-weight: 800;
@@ -149,7 +187,45 @@ body {
     list-style-type: none;
 }
 
+.slider-product {
+    display: flex;
+}
+
+.slider-product-images {
+    position: relative;
+
+    display: flex;
+    margin-right: 40px;
+}
+
+.slider-product-img {
+    display: block;
+}
+
+.slider-product-controls {
+    position: absolute;
+    top: 50%;
+
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    transform: translateY(-50%);
+}
+
+.slider-content {
+    position: relative;
+    z-index: 0;
+
+    padding-top: 72px;
+}
+
 .slider-counter {
+    position: absolute;
+    top: -15px;
+    right: 50px;
+    z-index: 0;
+
     margin: 0;
 
     font-size: 180px;
@@ -159,6 +235,9 @@ body {
 }
 
 .slider-product-title {
+    position: relative;
+    z-index: 1;
+
     font-family: "Raleway";
     font-size: 50px;
     font-weight: 800;
@@ -167,6 +246,14 @@ body {
 
 .slider-product-description {
     color: #444444;
+}
+
+.slider-product-features-list {
+    display: flex;
+    margin: 0;
+    padding: 0;
+
+    list-style-type: none;
 }
 
 .slider-product-feature-count {
