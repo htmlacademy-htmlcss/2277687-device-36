@@ -42,9 +42,12 @@ body {
 }
 
 .page-container {
-    width: 1160px;
-    min-width: 1160px;
+    width: 1440px;
+    min-width: 1440px;
+    padding: 0 140px;
     margin: 0 auto;
+
+    box-sizing: border-box;
 }
 
 /* Buttons */
@@ -67,8 +70,6 @@ body {
     cursor: pointer;
 }
 
-.btn-secondary {}
-
 .btn-basic {
     position: relative;
     z-index: 0;
@@ -89,7 +90,6 @@ body {
     content: '';
 }
 
-
 .btn-basic:hover::before {
     height: 100%;
 
@@ -101,6 +101,33 @@ body {
 }
 
 .btn-basic:focus:not(:active) {
+    outline: 2px #af4fff solid;
+}
+
+.btn-basic:disabled {
+    opacity: .3;
+}
+
+.btn-secondary {
+    border: 3px #c4c4c4 solid;
+}
+
+.btn-secondary:hover {
+    color: #ffffff;
+
+    background-color: #000000;
+    border: 3px #000000 solid;
+}
+
+.btn-secondary:active {
+    color: rgba(229, 229, 229, 0.3);
+
+    background-color: #000000;
+    border: 3px #000000 solid;
+}
+
+.btn-secondary:focus:not(:active) {
+    border: 3px #c4c4c4 solid;
     outline: 2px #af4fff solid;
 }
 
@@ -180,6 +207,9 @@ body {
     line-height: 20px;
 
     background-color: transparent;
+    background-image: url(../images/search.svg);
+    background-position: 16px center;
+    background-repeat: no-repeat;
     border: 2px #000000 solid;
     border-radius: 50px 0 0 50px;
 
@@ -204,6 +234,22 @@ body {
 .menu-link {
     color: #000000;
     text-decoration: none;
+}
+
+.cart-counter {
+    display: inline-block;
+    padding: 5px 5px 2px 5px;
+    min-width: 21px;
+    min-height: 21px;
+
+    font-size: 14px;
+    line-height: 1;
+    text-align: center;
+
+    background-color: #ffffff;
+    border-radius: 50%;
+
+    box-sizing: border-box;
 }
 
 .header-submenu {
@@ -780,11 +826,21 @@ body {
 /*Subscribe*/
 
 .subscribe {
+    padding-top: 64px;
+    padding-bottom: 56px;
+
     background-color: #f0f0f0;
+}
+
+.subscribe-about {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 144px;
 }
 
 .subscribe-title {
     margin: 0;
+    max-width: 400px;
 
     font-family: "Raleway";
     font-size: 50px;
@@ -794,19 +850,52 @@ body {
 
 .subscribe-description {
     margin: 0;
+    max-width: 560px;
 
     color: #444444;
 }
 
+.subscribe-form-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.subscribe-form {
+    display: flex;
+}
+
 .subscribe-input {
+    width: 557px;
+    padding: 12px 16px;
+
     font-family: "Rubik", sans-serif;
     font-size: 18px;
     line-height: 30px;
     font-weight: 400;
+
+
+    background-color: transparent;
+    border: none;
+    border-bottom: 3px #c4c4c4 solid;
+
+    box-sizing: border-box;
+}
+
+.subscribe-btn {
+    padding: 13px 39px;
+    min-height: 56px;
 }
 
 .subscribe-note {
+    margin: 0;
+    padding-left: 32px;
+
     color: #444444;
+
+    background-image: url(../images/tick-big.svg);
+    background-position: left center;
+    background-repeat: no-repeat;
 }
 
 /*Inner header*/
