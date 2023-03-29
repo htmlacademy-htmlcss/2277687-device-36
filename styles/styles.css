@@ -63,6 +63,8 @@ body {
 
     background-color: transparent;
     border: none;
+
+    cursor: pointer;
 }
 
 .btn-secondary {}
@@ -431,6 +433,10 @@ body {
 
 /*Categories*/
 
+.catalog-categories {
+    margin-bottom: 70px;
+}
+
 .catalog-categories-list {
     display: grid;
     grid-template-columns: repeat(6, 160px);
@@ -509,12 +515,68 @@ body {
 }
 
 .services-list {
+    margin: 0;
     padding: 65px 0;
+
     border-right: 7px #000000 solid;
+
+    list-style-type: none;
+}
+
+.btn-service {
+    width: 160px;
+    min-height: 40px;
+    padding: 10px 10px;
+    margin-right: 120px;
+}
+
+.btn-service-active {
+    min-height: 40px;
+    width: 280px;
+    padding: 10px 20px;
+
+    color: #ffe17f;
+    text-align: left;
+
+    background-color: #000000;
+}
+
+.service-item:not(:last-child) {
+    margin-bottom: 35px;
+}
+
+.service-slider {
+    flex-grow: 1;
+    margin: 0;
+    padding: 0;
+
+    list-style-type: none;
 }
 
 .service-slide-hidden {
     display: none;
+}
+
+.service-slide {
+    padding: 72px 275px 72px 116px;
+}
+
+.service-slide-delivery {
+    background-image: url(../images/delivery-content.svg);
+    background-position: 674px center;
+    background-repeat: no-repeat;
+}
+
+.service-slide-warranty {
+    background-image: url(../images/warranty.svg);
+    background-position: 674px center;
+    background-repeat: no-repeat;
+}
+
+.service-slide-credit {
+    background-image: url(../images/credit.svg);
+    background-position: 674px center;
+    background-repeat: no-repeat;
 }
 
 .service-title {
@@ -534,7 +596,12 @@ body {
 /*Delivery*/
 
 .delivery-link {
+    position: relative;
+
+    display: block;
     margin: 0;
+    margin-bottom: 70px;
+    padding: 38px 140px;
 
     font-family: "Raleway";
     font-size: 20px;
@@ -545,6 +612,44 @@ body {
     text-decoration: none;
     text-transform: uppercase;
     text-align: center;
+
+    background-color: #f0f0f0;
+}
+
+.delivery-link::before {
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    height: 100%;
+    width: 125px;
+
+    background-color: #ffe17f;
+    background-image: url(../images/delivery.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    content: '';
+}
+
+.delivery-link::after {
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    height: 40px;
+    width: 40px;
+    margin: 30px 42px;
+
+    background-color: #dcdcdc;
+    background-image: url(../images/info.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+
+    opacity: .5;
+
+    content: '';
 }
 
 /*About*/
