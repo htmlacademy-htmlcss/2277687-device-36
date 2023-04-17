@@ -56,8 +56,8 @@
                                     Сравнить
                                 </a>
                             </li>
-                            <li class="menu-item">
-                                <a class="menu-link menu-link-cart" href="#">
+                            <li class="menu-item menu-cart-item">
+                                <a class="menu-link menu-link-cart cart-toggler" href="#">
                                     <span class="cart-counter">2</span>
                                     <svg class="menu-link-icon" focusable="false" aria-hidden="true" width="16"
                                         height="14" viewBox="0 0 16 14" fill="#000000"
@@ -74,6 +74,32 @@
                                     </svg>
                                     Корзина
                                 </a>
+                                <div class="popover-cart">
+                                    <ul class="popover-cart-products">
+                                        <li class="popover-cart-product">
+                                            <img class="cart-product-image" width="39" height="43"
+                                                src="./images/product-monopod.jpg" alt="Любительская селфи-палка" />
+                                            <p class="cart-product-name">Любительская<br>селфи-палка</p>
+                                            <a class="cart-delete-product-btn" href="">
+                                                <span class="visually-hidden">Удалить продукт из корзины</span>
+                                            </a>
+                                        </li>
+                                        <li class="popover-cart-product">
+                                            <img class="cart-product-image" width="39" height="43"
+                                                src="./images/product-pro-monopod.jpg"
+                                                alt="Профессиональная селфи-палка" />
+                                            <p class="cart-product-name">Профессиональная селфи-палка</p>
+                                            <a class="cart-delete-product-btn" href="">
+                                                <span class="visually-hidden">Удалить продукт из корзины</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <div class="popover-cart-amount">
+                                        <p class="cart-amount-text cart-amount-text-products">Товаров: 2</p>
+                                        <p class="cart-amount-text cart-amount-text-total">Сумма: 2000 ₽</p>
+                                    </div>
+                                    <a class="btn cart-btn" href="#">Открыть корзину</a>
+                                </div>
                             </li>
                         </ul>
                     </div>
