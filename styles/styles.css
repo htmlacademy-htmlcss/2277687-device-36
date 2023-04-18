@@ -1550,6 +1550,18 @@ body {
     cursor: pointer;
 }
 
+.catalog-filter-control:hover {
+    opacity: .6;
+}
+
+.catalog-filter-control:active {
+    opacity: .3;
+}
+
+.catalog-filter-control:disabled {
+    opacity: .1;
+}
+
 .control-mark-checkbox {
     position: absolute;
     top: 50%;
@@ -1565,6 +1577,18 @@ body {
     box-sizing: border-box;
 }
 
+.filter-checkbox input[type="checkbox"]:focus + .control-mark-checkbox {
+    outline: 2px #af4fff solid;
+    outline-offset: 2px;
+}
+
+.filter-checkbox input[type="checkbox"]:checked + .control-mark-checkbox {
+    background-image: url("../images/tick.svg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    border-color: #000000;
+}
+
 .control-mark-radio {
     position: absolute;
     top: 50%;
@@ -1578,6 +1602,30 @@ body {
     border-radius: 50%;
 
     box-sizing: border-box;
+}
+
+.filter-radio input[type="radio"]:focus + .control-mark-radio {
+    outline: 2px #af4fff solid;
+    outline-offset: 2px;
+}
+
+.filter-radio input[type="radio"]:checked + .control-mark-radio {
+    border-color: #000000;
+}
+
+.filter-radio input[type="radio"]:checked + .control-mark-radio::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 8px;
+    height: 8px;
+
+    background-color: #000000;
+    border-radius: 50%;
+
+    content: '';
 }
 
 /*Range slider*/
