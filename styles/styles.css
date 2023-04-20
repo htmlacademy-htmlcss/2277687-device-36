@@ -1671,6 +1671,24 @@ body {
     cursor: pointer;
 }
 
+.range-filter-toggle:hover {
+    background-color: #ebebeb80;
+    border: 2px #00000080 solid;
+}
+
+.range-filter-toggle:active {
+    background-color: #000000;
+}
+
+.range-filter-toggle:focus {
+    outline: 2px #af4fff solid;
+    outline-offset: 2px;
+}
+
+.range-filter-toggle:focus .range-filter-toggle-description {
+    outline: 2px #af4fff solid;
+}
+
 .range-filter-toggle-min {
     top: -8px;
     left: -9px;
@@ -1692,8 +1710,7 @@ body {
     line-height: 20px;
     text-align: center;
     white-space: nowrap;
-
-    opacity: .3;
+    color: rgba(0, 0, 0, 0.3);
 }
 
 /*Catalog main content*/
@@ -1799,12 +1816,72 @@ body {
 
 .product-item {
     position: relative;
+
+    cursor: pointer;
 }
 
-.product-new-item::after {
+.product-link {
+    display: block;
+
+    text-decoration: none;
+
+}
+
+.product-link:hover .product-title {
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.product-link:hover .product-link-more {
+    visibility: visible;
+    opacity: 1;
+
+    transition: .2s;
+}
+
+.product-link-more {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 360px;
+    height: 380px;
+
+    background-color: rgba(240, 240, 240, 0.8);
+
+    visibility: hidden;
+    opacity: 0;
+
+    transition: .2s;
+}
+
+.product-more-btn {
+    width: 220px;
+    min-height: 40px;
+}
+
+.product-link:active .product-title,
+.product-link:active .product-price {
+    color: rgba(0, 0, 0, 0.3);
+}
+
+.product-link:active .product-more-btn::before {
+    background-color: #ffc700;
+}
+
+.product-link:focus {
+    outline: 2px #af4fff solid;
+    outline-offset: 2px;
+}
+
+.product-new-link::before {
     position: absolute;
     top: 27px;
     right: 27px;
+    z-index: 0;
 
     display: flex;
     justify-content: center;
@@ -1819,6 +1896,7 @@ body {
     text-transform: uppercase;
     letter-spacing: .2rem;
     font-size: 14px;
+    color: #000000;
 
     border: 2px #000000 solid;
     border-radius: 50%;
@@ -2101,6 +2179,25 @@ body {
     justify-self: flex-end;
 }
 
+.html-academy-logo-link {
+    display: block;
+
+    line-height: 1;
+}
+
+.html-academy-logo-link:hover .html-academy-logo-icon {
+    fill: #ffffff;
+}
+
+.html-academy-logo-link:active .html-academy-logo-icon {
+    fill: #ffffff;
+    opacity: .3;
+}
+
+.html-academy-logo-link:focus:not(:active) {
+    outline: 1px #af4fff solid;
+}
+
 .footer-address-info {
     font-size: 16px;
     line-height: 20px;
@@ -2128,23 +2225,4 @@ body {
     font-size: 16px;
     line-height: 20px;
     font-weight: 400;
-}
-
-.html-academy-logo-link {
-    display: block;
-
-    line-height: 1;
-}
-
-.html-academy-logo-link:hover .html-academy-logo-icon {
-    fill: #ffffff;
-}
-
-.html-academy-logo-link:active .html-academy-logo-icon {
-    fill: #ffffff;
-    opacity: .3;
-}
-
-.html-academy-logo-link:focus:not(:active) {
-    outline: 1px #af4fff solid;
 }
