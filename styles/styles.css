@@ -127,8 +127,8 @@ body {
 }
 
 .btn-secondary:focus:not(:active) {
-    border: 3px #c4c4c4 solid;
     outline: 2px #af4fff solid;
+    outline-offset: 2px;
 }
 
 .btn-more {
@@ -1776,6 +1776,18 @@ body {
     opacity: .2;
 }
 
+.sort-btn:hover {
+    opacity: .5;
+}
+
+.sort-btn:active {
+    opacity: 1;
+}
+
+.sort-btn:focus {
+    outline: 2px #af4fff solid;
+}
+
 .sort-btn-asc {
     background-image: url(../images/arrow-up-2.svg);
 }
@@ -1944,6 +1956,22 @@ body {
     letter-spacing: .12rem;
 }
 
+.btn-more-products:hover {
+    border-color: #000000;
+}
+
+.btn-more-products:active {
+    opacity: .3;
+}
+
+.btn-more-products:focus {
+    outline: 2px #af4fff solid;
+}
+
+.btn-more-products:disabled {
+    opacity: .3;
+}
+
 /*Pagination*/
 
 .catalog-pagination {
@@ -1975,18 +2003,44 @@ body {
     font-size: 16px;
     line-height: 20px;
     font-weight: 400;
-    color: #000000;
+    color: rgba(0, 0, 0, 0.3);
     text-decoration: none;
+}
 
-    opacity: .3;
+.pagination-link:hover {
+    color: #000000;
+}
+
+.pagination-link:active {
+    color: rgba(0, 0, 0, 0.1);
+}
+
+.pagination-link:focus:not(:active) {
+    outline: 2px #af4fff solid;
 }
 
 .pagination-link-active {
-    opacity: .6;
+    color: rgba(0, 0, 0, 0.6);
 }
+
 
 .btn-pagination {
     padding: 25px;
+}
+
+.btn-pagination:hover {
+    background-color: #dcdcdc;
+}
+
+.btn-pagination:active {
+    color: rgba(0, 0, 0, 0.3);
+
+    background-color: #dcdcdc;
+}
+
+.btn-pagination:focus {
+    outline: 2px #af4fff solid;
+    outline-offset: 2px;
 }
 
 /*Footer*/
@@ -2225,4 +2279,168 @@ body {
     font-size: 16px;
     line-height: 20px;
     font-weight: 400;
+}
+
+
+/* Modal */
+
+.modal {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 2;
+
+    display: flex;
+
+    background-color: rgba(240, 240, 240, .9);
+}
+
+.modal-closed {
+    display: none;
+}
+
+.modal-dialog {
+    width: 920px;
+    margin: auto;
+    padding: 62px 70px;
+
+    background-color: #ffffff;
+    border: 10px #000000 solid;
+
+    box-sizing: border-box;
+}
+
+.modal-header {
+    position: relative;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 42px;
+}
+
+.modal-title {
+    margin: 0;
+
+    font-family: 'Raleway', sans-serif;
+    font-size: 50px;
+    line-height: 50px;
+}
+
+.modal-close {
+    width: 26px;
+    height: 26px;
+    margin: 0;
+    padding: 0;
+
+    border: none;
+    background: none;
+    background-image: url(../images/cross.svg);
+    background-position: center center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.modal-form {
+    display: grid;
+    grid-template-columns: 360px 40px 140px 40px 180px;
+    grid-template-rows: auto 60px auto 42px auto auto 42px auto;
+}
+
+.modal-input-description {
+    margin-bottom: 14px;
+
+    font-size: 18px;
+    line-height: 20px;
+    letter-spacing: -.02rem;
+    font-weight: 700;
+}
+
+.modal-description-name {
+    grid-column: 1 / 2;
+}
+
+.modal-description-email {
+    grid-column: 3 / -1;
+}
+
+.modal-description-product {
+    grid-column: 1 / 4;
+    grid-row: 5 / 6;
+}
+
+.modal-description-count {
+    grid-column: 5 / -1;
+    grid-row: 5 / 6;
+}
+
+.modal-input {
+    height: 60px;
+    padding: 20px;
+    padding-right: 50px;
+
+    font-family: 'Rubik', sans-serif;
+    font-size: 16px;
+    line-height: 20px;
+    color: #000000;
+
+    background-color: #f0f0f0;
+    border: none;
+
+    box-sizing: border-box;
+}
+
+.modal-input-error {
+    border: 2px #ff3d3d solid;
+}
+
+.modal-input-name {
+    grid-column: 1 / 2;
+
+    background-image: url(../images/login.svg);
+    background-position: center right 20px;
+    background-repeat: no-repeat;
+}
+
+.modal-input-email {
+    grid-column: 3 / -1;
+
+    background-image: url(../images/letter.svg);
+    background-position: center right 20px;
+    background-repeat: no-repeat;
+}
+
+.modal-input-product {
+    grid-column: 1 / 4;
+    grid-row: 6 / 7;
+}
+
+.modal-input-count {
+    grid-column: 5 / -1;
+    grid-row: 6 / 7;
+}
+
+.error-info {
+    margin: 0;
+
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.error-info-name {
+    grid-column: 1 / 2;
+}
+
+.error-info-email {
+    grid-column: 3 / -1;
+    color: #ff3d3d;
+}
+
+.btn-modal {
+    grid-row: 9/10;
+    min-height: 40px;
+    width: 200px;
 }
