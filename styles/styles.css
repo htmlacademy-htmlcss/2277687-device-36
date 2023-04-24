@@ -2342,6 +2342,21 @@ body {
     background-position: center center;
     background-size: 100%;
     background-repeat: no-repeat;
+
+    cursor: pointer;
+}
+
+.modal-close:hover {
+    opacity: .6;
+}
+
+.modal-close:active {
+    opacity: .3;
+}
+
+.modal-close:focus:not(:active) {
+    outline: 2px #af4fff solid;
+    outline-offset: 2px;
 }
 
 .modal-form {
@@ -2393,6 +2408,20 @@ body {
     box-sizing: border-box;
 }
 
+
+.modal-input:hover {
+    background-color: #dcdcdc;
+}
+
+.modal-input:focus {
+    outline: 2px #af4fff solid;
+    outline-offset: 2px;
+}
+
+.modal-input:disabled {
+    opacity: .3;
+}
+
 .modal-input-error {
     border: 2px #ff3d3d solid;
 }
@@ -2418,7 +2447,7 @@ body {
     grid-row: 6 / 7;
 }
 
-.modal-input-count {
+.modal-counter {
     grid-column: 5 / -1;
     grid-row: 6 / 7;
 }
@@ -2443,4 +2472,168 @@ body {
     grid-row: 9/10;
     min-height: 40px;
     width: 200px;
+}
+
+/*Counter*/
+
+.modal-counter {
+    position: relative;
+
+    width: 100%;
+}
+
+.modal-counter-input {
+    width: 100%;
+    min-height: 60px;
+    padding: 15px 60px;
+
+    font-family: 'Rubik', sans-serif;
+    font-size: 16px;
+    line-height: 20px;
+    color: #000000;
+    text-align: center;
+
+    background-color: #f0f0f0;
+    border: none;
+    appearance: none;
+
+    box-sizing: border-box;
+}
+
+.modal-counter-input:focus {
+    outline: none;
+}
+
+.modal-counter-input::-webkit-outer-spin-button,
+.modal-counter-input::-webkit-inner-spin-button {
+    display: none;
+}
+
+.modal-counter-btn {
+    position: absolute;
+    top: 0;
+
+    width: 60px;
+    min-height: 60px;
+
+    background: none;
+    border: none;
+
+    cursor: pointer;
+}
+
+.modal-counter-btn-minus {
+    left: 0;
+}
+
+.modal-counter-btn-plus {
+    right: 0;
+}
+
+.modal-counter-icon {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+
+    margin: auto;
+
+    fill: #000000;
+}
+
+.modal-counter-btn:hover {
+    background-color: #ebebeb;
+}
+
+.modal-counter-btn:hover .modal-counter-icon {
+    fill: rgba(0, 0, 0, 0.6);
+}
+
+.modal-counter-btn:active {
+    background-color: #f0f0f0;
+}
+
+.modal-counter-btn:active .modal-counter-icon {
+    fill: rgba(0, 0, 0, 0.3);
+}
+
+.modal-counter-btn:focus:not(:active) {
+    outline: #af4fff 2px solid;
+}
+
+/*Tooltip*/
+
+.modal-tooltip {
+    position: absolute;
+    z-index: 1;
+
+
+    height: 26px;
+    margin-top: -2px;
+    margin-left: 5px;
+}
+
+.modal-tooltip-toggle {
+    vertical-align: top;
+    width: 26px;
+    height: 26px;
+    margin-left: 6px;
+
+    background-color: #ffe17f;
+    background-image: url("../images/info.svg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    border: none;
+    border-radius: 50%;
+
+    cursor: help;
+}
+
+.modal-tooltip-text {
+    position: absolute;
+    top: calc(100% + 10px);
+    right: -33px;
+
+    display: none;
+    width: 200px;
+    padding: 19px;
+
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: .01rem;
+    color: #ffffff;
+
+    background-color: #000000;
+
+    box-sizing: border-box;
+}
+
+.modal-tooltip-toggle:hover + .modal-tooltip-text,
+.modal-tooltip-toggle:focus + .modal-tooltip-text {
+    display: block;
+}
+
+.input-description-icon {
+    position: relative;
+
+    padding-left: 4px;
+    padding-right: 32px;
+}
+
+.modal-tooltip-text::after {
+    position: absolute;
+    top: -6px;
+    left: 0;
+    right: 0;
+
+    width: 14px;
+    height: 6px;
+    margin-left: auto;
+    margin-right: 40px;
+
+    background-image: url("../images/tooltip-arrow.svg");
+
+    content: "";
 }

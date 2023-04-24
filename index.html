@@ -284,7 +284,7 @@
               </a>
             </li>
             <li class="category-item">
-              <a class="category-link category-icon-monopod" href="#">
+              <a class="category-link category-icon-monopod" href="./catalog.html">
                 Моноподы<br>для селфи
               </a>
             </li>
@@ -540,28 +540,50 @@
           </button>
         </header>
         <section class="modal-content">
-          <h3 class="visually-hidden">Форма поиска отелей в Седоне</h3>
+          <h3 class="visually-hidden">Форма доставки</h3>
           <form class="modal-form" action="https://echo.htmlacademy.ru/" method="post">
-            <label class="modal-input-description modal-description-name">Ваше имя:</label>
-            <label class="modal-input-description modal-description-email">Ваш e-mail:</label>
-            <input class="modal-input modal-input-name" placeholder="Введите имя">
-            <input class="modal-input modal-input-email modal-input-error" placeholder="Введите e-mail">
+            <label class="modal-input-description modal-description-name" for="name">Ваше имя:</label>
+            <label class="modal-input-description modal-description-email" for="email-form">Ваш e-mail:</label>
+            <input class="modal-input modal-input-name" type="text" placeholder="Введите имя" name="name" id="name"
+              required>
+            <input class="modal-input modal-input-email modal-input-error" type="email" placeholder="Введите e-mail"
+              name="email-form" id="email-form" required>
             <p class="error-info error-info-name">Добавьте имя</p>
             <p class="error-info error-info-email">Забавный у вас адрес</p>
-            <label class="modal-input-description modal-description-product">Что нужно привезти:</label>
-            <label class="modal-input-description modal-description-count">Количество:</label>
-            <input class="modal-input modal-input-product" placeholder="В свободной форме">
-            <input class="modal-input modal-input-count">
-            <button class="btn btn-basic btn-modal" type="button">Отправить</button>
+            <label class="modal-input-description modal-description-product" for="products-name">Что нужно
+              привезти:</label>
+            <label class="modal-input-description modal-description-count" for="products">Количество:
+              <span class="modal-tooltip">
+                <button class="modal-tooltip-toggle" type="button" aria-labelledby="tooltip-label-children"></button>
+                <span class="modal-tooltip-text" role="tooltip" id="tooltip-label-children">
+                  Постараемся найти, сколько нужно. Привезём сколько получится по требованиям<br>
+                  к провозу багажа.</span>
+              </span>
+            </label>
+            <input class="modal-input modal-input-product" type="text" placeholder="В свободной форме"
+              name="products-name" id="products-name" required>
+            <div class="modal-counter">
+              <button class="modal-counter-btn modal-counter-btn-minus" type="button">
+                <span class="visually-hidden">Уменьшить количество товара</span>
+                <svg class="modal-counter-icon" xmlns="http://www.w3.org/2000/svg" width="15" height="2"
+                  aria-hidden="true" focusable="false" viewBox="0 0 15 2" fill="none">
+                  <path d="M.4 0v2h14V0H.4Z" />
+                </svg>
+              </button>
+              <input class="modal-counter-input" type="number" name="products" id="products" required>
+              <button class="modal-counter-btn modal-counter-btn-plus" type="button">
+                <span class="visually-hidden">Увеличить количество товара</span>
+                <svg class="modal-counter-icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14"
+                  aria-hidden="true" focusable="false" viewBox="0 0 14 14" fill="none">
+                  <path d="M14 6H8V0H6v6H0v2h6v6h2V8h6V6Z" />
+                </svg>
+              </button>
+            </div>
+            <button class="btn btn-basic btn-modal" type="submit">Отправить</button>
           </form>
         </section>
       </div>
     </div>
-
-
-
-
-
   </body>
 
 </html>
