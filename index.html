@@ -74,7 +74,7 @@
                     <li class="popover-cart-product">
                       <a class="cart-product-description" href="#">
                         <img class="cart-product-image" width="39" height="43" src="./images/product-monopod.jpg"
-                          alt="Любительская селфи-палка" />
+                          alt="Любительская селфи-палка">
                         <p class="cart-product-name">Любительская<br>селфи-палка</p>
                       </a>
                       <a class="cart-delete-product-btn" href="">
@@ -84,7 +84,7 @@
                     <li class="popover-cart-product">
                       <a class="cart-product-description" href="#">
                         <img class="cart-product-image" width="39" height="43" src="./images/product-pro-monopod.jpg"
-                          alt="Профессиональная селфи-палка" />
+                          alt="Профессиональная селфи-палка">
                         <p class="cart-product-name">Профессиональная селфи-палка</p>
                       </a>
                       <a class="cart-delete-product-btn" href="">
@@ -136,10 +136,10 @@
               </div>
             </li>
             <li class="header-submenu-item">
-              <a class="header-submenu-link" href="#">Доставка</a>
+              <a class="header-submenu-link" href="#delivery">Доставка</a>
             </li>
             <li class="header-submenu-item">
-              <a class="header-submenu-link" href="#">Гарантия</a>
+              <a class="header-submenu-link" href="#warranty">Гарантия</a>
             </li>
             <li class="header-submenu-item">
               <a class="header-submenu-link" href="#">Контакты</a>
@@ -326,13 +326,13 @@
             </li>
           </ul>
           <ul class="service-slider">
-            <li class="service-slide service-slide-delivery">
+            <li class="service-slide service-slide-delivery" id="delivery">
               <h3 class="service-title">Доставка</h3>
               <p class="service-description">Мы с удовольствием доставим ваш товар прямо<br>
                 к вашему подъезду совершенно бесплатно! Ведь<br>
                 мы неплохо заработаем, поднимая его на ваш этаж.</p>
             </li>
-            <li class="service-slide service-slide-warranty service-slide-hidden">
+            <li class="service-slide service-slide-warranty service-slide-hidden" id="warranty">
               <h3 class="service-title">Гарантия</h3>
               <p class="service-description">Если из-за возгорания купленного у нас товара у вас
                 сгорит дом — не переживайте, мы выдадим вам новый.
@@ -418,10 +418,10 @@
           <h2 class="visually-hidden">Сервисы</h2>
           <ul class="footer-services-list">
             <li class="footer-services-item">
-              <a class="footer-services-link" href="#">Доставка</a>
+              <a class="footer-services-link" href="#delivery">Доставка</a>
             </li>
             <li class="footer-services-item">
-              <a class="footer-services-link" href="#">Гарантия</a>
+              <a class="footer-services-link" href="#warranty">Гарантия</a>
             </li>
             <li class="footer-services-item">
               <a class="footer-services-link" href="#">Контакты</a>
@@ -531,7 +531,7 @@
     </footer>
 
 
-    <div class="modal">
+    <div class="modal modal-closed">
       <div class="modal-dialog">
         <header class="modal-header">
           <h2 class="modal-title">Доставка под заказ</h2>
@@ -554,8 +554,8 @@
               привезти:</label>
             <label class="modal-input-description modal-description-count" for="products">Количество:
               <span class="modal-tooltip">
-                <button class="modal-tooltip-toggle" type="button" aria-labelledby="tooltip-label-children"></button>
-                <span class="modal-tooltip-text" role="tooltip" id="tooltip-label-children">
+                <button class="modal-tooltip-toggle" type="button" aria-labelledby="tooltip-label-product"></button>
+                <span class="modal-tooltip-text" role="tooltip" id="tooltip-label-product">
                   Постараемся найти, сколько нужно. Привезём сколько получится по требованиям<br>
                   к провозу багажа.</span>
               </span>
